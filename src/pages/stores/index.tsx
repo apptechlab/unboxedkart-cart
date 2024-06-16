@@ -16,7 +16,7 @@ const Stores = () => {
       <main>
         <div>
           {isLoading ? (
-            <p>Is loading</p>
+            <p></p>
           ) : (
             data?.map((store: StoreType, index) => <StoreWidget key={index} store={store} />)
           )}

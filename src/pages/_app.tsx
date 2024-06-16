@@ -35,12 +35,12 @@ function MyApp({ Component, pageProps }: AppProps) {
       {/* <Hydrate state={pageProps.dehydratedState}> */}
       {/* <ManagedUIContext> */}
       <div className="bg-backgroundWhite">
-        <Layout className="bg-black" pageProps={pageProps}>
+        {/* <Layout className="bg-black" pageProps={pageProps}> */}
           <div className="bg-backgroundWhite sm:mt-2 lg:mt-4 font-trebuchet">
             <div className="h-10 lg:h-2 "></div>
             <Component {...pageProps} key={router.route} />
           </div>
-        </Layout>
+        {/* </Layout> */}
         <ManagedModel />
         <ManagedDrawer />
       </div>

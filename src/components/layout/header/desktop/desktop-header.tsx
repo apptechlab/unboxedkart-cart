@@ -50,7 +50,7 @@ const Header: React.FC = () => {
     <header
       id="siteHeader"
       ref={siteHeaderRef}
-      className="w-full h-5 h-20 relative z-20"
+      className="h-5 h-20 relative z-10"
     >
       <div>
         {width > 1200 ? (

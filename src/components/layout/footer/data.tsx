@@ -53,16 +53,21 @@ export const footer = {
           title: footerData["text-faq"],
           path: "/",
         },
-        // {
-        //   id: 4,
-        //   title: footerData["text-terms"],
-        //   path: "/",
-        // },
-        // {
-        //   id: 3,
-        //   title: footerData["text-privacy-policy"],
-        //   path: "/",
-        // },
+        {
+          id: 4,
+          title: "Shipping Policy",
+          path: "/shipping-policy",
+        },
+        {
+          id: 3,
+          title: "Terms & Conditions",
+          path: "/terms&conditions",
+        },
+        {
+          id: 3,
+          title: "Refund & Return",
+          path: "/refund&returns",
+        },
         {
           id: 4,
           title: footerData["text-contact-us"],
@@ -77,22 +82,25 @@ export const footer = {
         {
           id: 1,
           title: footerData["text-our-blog"],
-          path: "/",
+          path: "/blog",
           icon: <CgWebsite />,
         },
         {
           id: 4,
           title: footerData["text-instagram"],
+          path: "https://instagram.com/unboxedkart",
           icon: <IoLogoInstagram />,
         },
-        {
-          id: 2,
-          title: footerData["text-facebook"],
-          icon: <IoLogoFacebook />,
-        },
+        // {
+        //   id: 2,
+        //   title: footerData["text-facebook"],
+        //   path: "https://facebook.com/unboxedkart",
+        //   icon: <IoLogoFacebook />,
+        // },
         {
           id: 3,
           title: footerData["text-twitter"],
+          path: "https://twitter.com/unboxedkart",
           icon: <IoLogoTwitter />,
         },
       ],
@@ -109,17 +117,17 @@ export const footer = {
         {
           id: 2,
           title: footerData["text-grade-a"],
-          path: "/condition/unboxed",
+          path: "/condition/grade-a",
         },
         {
           id: 3,
           title: footerData["text-grade-b"],
-          path: "/condition/unboxed",
+          path: "/condition/grade-b",
         },
         {
           id: 4,
           title: footerData["text-grade-c"],
-          path: "/condition/unboxed",
+          path: "/condition/grade-c",
         },
       ],
     },

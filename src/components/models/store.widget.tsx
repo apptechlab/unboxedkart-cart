@@ -17,7 +17,10 @@ const StoreWidget = (props: StoreWidgetProps) => {
       <h2>Open hours : {store.storeTimings}</h2>
       <h2>Open days : {store.storeOpenDays}</h2>
       <h2 className="font-bold">Contact Number : {store.contactNumber}</h2>
-      <h2 className="text-unboxedkartBlue font-bold mt-2">Click here to get directions to the store</h2>
+      <a href={store.directionsUrl}>
+        <h2 className="text-unboxedkartBlue font-bold mt-2">{store.type == "pickup-point" ? "Click here to get directions to Pick-up Point" : "Click here to get directions to our Store"}</h2>
+      </a>
+
     </div>
   );
 };

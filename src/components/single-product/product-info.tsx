@@ -17,6 +17,29 @@ const ProductInfo = (props: any) => {
     }
   }
 
+  // function addToCart() {
+    
+  // }
+
+  const addToCart = () => {
+    let localStoredData = localStorage.getItem('cart');
+    let cart = [];
+    if (localStoredData) {
+      cart = JSON.parse(localStoredData);
+    }
+
+    const productInCart = cart.find((item: { productId: string; }) => item.productId === product._id);
+    
+    if (productInCart) {
+      productInCart.count += 1;
+    } else {
+      cart.push({ productId: product._id, count: 1 });
+    }
+
+    localStorage.setItem('cart', JSON.stringify(cart));
+    alert('Product added to cart');
+  };
+
   const ProductTitle = () => {
     return (
       <div className="bg-white rounded-2xl p-4 ">
@@ -60,16 +83,16 @@ const ProductInfo = (props: any) => {
   //     );
   //   };
 
-  const BuyNowButton = () => {
+  const AddToCart = () => {
     return (
       <div>
         <Button
-          onClick={handleDownload}
+          onClick={addToCart}
           variant="slim"
           className="w-full md:1/2 lg:1/2 my-2 mx-0 bg-white"
           color="blue-500"
         >
-          <span className="py-2 3xl:px-8 font-trebuchet">Buy Now</span>
+          <span className="py-2 3xl:px-8 font-trebuchet">ADD TO CART</span>
         </Button>
       </div>
     );
@@ -104,7 +127,7 @@ const ProductInfo = (props: any) => {
       <ProductPricing />
       <AboutProduct />
       <ProductHighlights />
-      <BuyNowButton />
+      <AddToCart />
     </div>
   );
 };

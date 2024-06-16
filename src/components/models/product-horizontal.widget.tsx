@@ -32,11 +32,11 @@ const ProductWidgetHorizontal = (props: ProductWidgetProps) => {
               />
             </div>
             <div className="flex flex-col my-6 mx-4 pt-5">
-              <button onClick={navigateToProductPage}>
+              {/* <button onClick={navigateToProductPage}> */}
                 <p className="text-sm md:text-lg lg:text-xl text-black 2xl:text-lg font-bold group-hover:text-unboxedkartBlue text-left">
                   {product.title}
                 </p>
-              </button>
+              {/* </button> */}
               {/* <div className="bg-green-500 text-white justify-self-center flex p-1 m-0 w-10 my-1 text-xs">
                 {4.5} ★
               </div> */}

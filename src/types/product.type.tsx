@@ -24,6 +24,13 @@ export type ProductType = {
   moreDetails: MoreDetails;
 };
 
+export type CartItem = {
+  productId: string;
+  count: number;
+};
+
+export type CartItemWithDetails = ProductType & { count: number };
+
 type MoreDetails = {
   color: string;
   colorCode: string;

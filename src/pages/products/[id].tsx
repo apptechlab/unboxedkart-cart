@@ -11,6 +11,7 @@ import {
   fetchProduct
 } from "../../handler-functions/products/single-product/get-product";
 import { ProductType } from "../../types/product.type";
+import Button from "../../components/widgets/button";
 
 export default function ProductDetails() {
   const router = useRouter();
@@ -39,7 +40,7 @@ export default function ProductDetails() {
           <div className="">
             <div className="flex flex-col md:flex-row lg:flex-row h-full w-full pb-5 px-4">
               <div className="w-full md:w-2/5 lg:2/5 relative">
-                <div className="sticky top-28 left-0 bg-white rounded-2xl bg-white mx-0 md:mx-4 p-4">
+                <div className="sticky top-28 left-0 rounded-2xl bg-white mx-0 md:mx-4 p-4">
                   <ProductImages images={product?.imageUrls.images} />
                 </div>
               </div>

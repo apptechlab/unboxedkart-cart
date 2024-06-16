@@ -8,7 +8,11 @@ import FindAStore from "../components/home/find-store";
 import NeedHelpWidget from "../components/home/need-help-widget";
 import OurGoalWidget from "../components/home/our-goal-widget";
 import StorePickUpWidget from "../components/home/store-pickup-widget";
+import SideNavbar from "../components/layout/header/mobile/mobile-navigation/side-bar";
+import UserSignInIcon from "../components/layout/header/mobile/user-signin-icon";
 import Layout from "../components/layout/layout";
+import HeroBlock from "../components/home/hero-block";
+import DownloadApps from "../components/widgets/download-apps";
 // import DownloadApps from "../components/widgets/download-apps";
 
 export default function Home() {
@@ -104,28 +108,21 @@ export default function Home() {
       </Head>
       <main>
         <div className="">
-          <StorePickUpWidget />
-          {/* <HeroBlock /> */}
-          <BrandsBlock brands={brands} slug={"/brand/"} />
-          <CategoriesBlock categories={categories} url={"/category/"} />
-          <ConditionsBlock slug={"/condition/"} />
-          <NeedHelpWidget />
-          <FindAStore />
-          {/* <DownloadApps /> */}
+          {/* <SideNavbar /> */}
+
+
+          {/* <UserSignInIcon/> */}
+          <StorePickUpWidget slug={"/cart/"}/>
+          {/* <HeroBlock />  */}
+          <BrandsBlock brands={brands} slug={"/brand/"} /> 
+          <CategoriesBlock categories={categories} url={"/category/"} /> 
+          <ConditionsBlock slug={"/condition/"} /> 
+          <NeedHelpWidget /> 
+          <FindAStore /> 
+          <DownloadApps /> 
 
           <OurGoalWidget />
           <BottomImage />
-          {/* <AppBanner
-            appInfo={appInfo}
-            position="top"
-            onClose={() => {
-              console.log("onClose called");
-            }}
-            hidden={false}
-            style={{
-              zIndex: 10,
-            }}
-          /> */}
         </div>
       </main>
     </div>

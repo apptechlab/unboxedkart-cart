@@ -8,4 +8,5 @@ export type StoreType = {
   storeOpenDays: string;
   contactNumber: number;
   alternateContactNumber: number;
+  type:string;
 };

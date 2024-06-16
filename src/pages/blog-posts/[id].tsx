@@ -86,12 +86,10 @@ export default function BlogPostTile() {
                     <div className='m-4'>
                         <p className='text-left text-2xl font-bold'>{blogPosts[0].title}</p>
                     </div>
-                    {/* <div>
-                        {
-                            blogPosts[parseInt(slug as string)].content?.map((content, index) => (<BlogContentBlock key={index} content={content.content} fontSize={content.fontSize} isBold={content.isBold} isItalic={content.isBold} isUnderline={content.isUnderline} linkTo={content.linkTo} />))
-
-                        }
-                    </div> */}
+                    <div>
+                    </div>
+                    
+                   
                     {/* <div>
                         <BlogPostAuthor
                             name={blogPosts[parseInt(slug as string)].authorDetails.name}
