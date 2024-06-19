@@ -15,7 +15,7 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "webpack.config.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "webpack.config.js", "src/contexts/authContext.js"],
   "exclude": ["node_modules"],
   "paths": {
     "@components/*": ["src/Components/*"],

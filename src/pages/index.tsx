@@ -13,6 +13,8 @@ import UserSignInIcon from "../components/layout/header/mobile/user-signin-icon"
 import Layout from "../components/layout/layout";
 import HeroBlock from "../components/home/hero-block";
 import DownloadApps from "../components/widgets/download-apps";
+import { useAuth } from "../contexts/authContext";
+import { useEffect } from "react";
 // import DownloadApps from "../components/widgets/download-apps";
 
 export default function Home() {
@@ -94,6 +96,17 @@ export default function Home() {
   ];
 
   const { width } = useWindowSize();
+
+  const { token } = useAuth();
+
+  useEffect(() => {
+    console.log('accessed');
+    console.log(`token: ${token}`);
+    if (token) {
+      // Perform actions with the token
+      console.log('Token:', token);
+    }
+  }, [token]);
 
   return (
     <div>
