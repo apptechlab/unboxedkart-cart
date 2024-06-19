@@ -11,6 +11,7 @@ import { useRef } from "react";
 import MobileMenu from "../components/layout/header/mobile/mobile-menu";
 import ManagedModel from "../components/layout/modal/managed-model";
 import ManagedDrawer from "../components/layout/drawer/managed-drawer";
+import { CartProvider } from "./my-account/cart/cart-context";
 // import { ManagedUIContext, UIProvider } from "../contexts/ui.context";
 // import { ManagedUIContext, UIProvider } from "../contexts/ui.context";
 // import { ManagedUIContext, UIProvider } from "../contexts/ui.contexts";
@@ -31,7 +32,8 @@ function MyApp({ Component, pageProps }: AppProps) {
   }
 
   return (
-    <QueryClientProvider client={queryClientRef.current}>
+    <CartProvider>
+      <QueryClientProvider client={queryClientRef.current}>
       {/* <Hydrate state={pageProps.dehydratedState}> */}
       {/* <ManagedUIContext> */}
       <div className="bg-backgroundWhite">
@@ -47,6 +49,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       {/* </ManagedUIContext> */}
       {/* </Hydrate> */}
     </QueryClientProvider>
+    </CartProvider>
   );
 }
 

@@ -1,9 +1,13 @@
+import { useCart } from "../../pages/my-account/cart/cart-context";
 import { ProductType } from "../../types/product.type";
 import Button from "../widgets/button";
 import ProductHighlight from "./product-highlight";
 
-const ProductInfo = (props: any) => {
-  const product: ProductType = props.product;
+interface ProductDetailProps {
+  product: ProductType;
+}
+
+const ProductInfo : React.FC<ProductDetailProps> = ({ product }) => {
   const discountInPrice = product.pricing.price - product.pricing.sellingPrice;
 
   function handleDownload() {
@@ -21,22 +25,10 @@ const ProductInfo = (props: any) => {
     
   // }
 
-  const addToCart = () => {
-    let localStoredData = localStorage.getItem('cart');
-    let cart = [];
-    if (localStoredData) {
-      cart = JSON.parse(localStoredData);
-    }
+  const { addToCart } = useCart();
 
-    const productInCart = cart.find((item: { productId: string; }) => item.productId === product._id);
-    
-    if (productInCart) {
-      productInCart.count += 1;
-    } else {
-      cart.push({ productId: product._id, count: 1 });
-    }
-
-    localStorage.setItem('cart', JSON.stringify(cart));
+  const handleAddToCart = () => {
+    addToCart({ productId: product._id, count: 1 });
     alert('Product added to cart');
   };
 
@@ -87,7 +79,7 @@ const ProductInfo = (props: any) => {
     return (
       <div>
         <Button
-          onClick={addToCart}
+          onClick={handleAddToCart}
           variant="slim"
           className="w-full md:1/2 lg:1/2 my-2 mx-0 bg-white"
           color="blue-500"
